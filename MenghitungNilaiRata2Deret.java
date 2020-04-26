@@ -24,7 +24,7 @@ public class MenghitungNilaiRata2Deret {
     public void totalRataRata() {
         System.out.println("Data Bilangan : "+this.dataDeret);
         System.out.println("Total Bilangan : "+this.dataTotalDeret);
-        System.out.println("Rata - Rata : "+(this.dataTotalDeret/this.dataDeret.size()));
+        System.out.println("Rata - Rata : "+((float)this.dataTotalDeret/this.dataDeret.size()));
     }
 
     public static void main(String[] args) {
