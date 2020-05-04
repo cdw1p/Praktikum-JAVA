@@ -8,15 +8,17 @@ import java.io.IOException;
  * @author 1337
  */
 public class PrintListingOutput {
+    protected String[] dataArray = {"CAHYO DWI PUTRO", "1461900333"};
+
     public void printListing() {
-        for(int i=0; i<5; i++) {
-            System.out.println("Halo Dunia");
+        for (String arr:dataArray) {
+            System.out.println(arr);  
         }
     }
 
     public void writeFile() {
 	File file = new File("C:/outputFile.txt");
-	String content = "NAMA : CAHYO DWI PUTRO\nNBI : 1461900333";
+	String content = "NAMA : "+dataArray[0]+"\nNBI : "+dataArray[1];
         
         try (FileOutputStream fop = new FileOutputStream(file)) {
             if (!file.exists()) {
@@ -27,7 +29,7 @@ public class PrintListingOutput {
             fop.write(contentInBytes);
             fop.flush();
             fop.close();
-            System.out.println("Done");
+            System.out.println("\nWrite File Done!");
         } catch (IOException e) {
             e.printStackTrace();
 	}
